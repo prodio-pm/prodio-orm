@@ -1,0 +1,34 @@
+{
+  "name": "prodio-orm",
+  "version": "0.0.1",
+  "description": "Object Relation Model and Validation module",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prodio-pm/prodio-orm.git"
+  },
+  "keywords": [
+    "ORM",
+    "Prodio",
+    "Object",
+    "Relation",
+    "Model",
+    "Validation"
+  ],
+  "author": "Jeremy Darling <Jeremy.Darling@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prodio-pm/prodio-orm/issues"
+  },
+  "homepage": "https://github.com/prodio-pm/prodio-orm",
+  "dependencies": {
+    "async": "^0.9.0",
+    "semver": "^4.0.3"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.4"
+  }
+}
