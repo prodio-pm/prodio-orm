@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/jdarling/prodio-orm.svg?branch=master)](https://travis-ci.org/jdarling/prodio-orm)
+[![Build Status](https://travis-ci.org/jdarling/prodio-orm.svg?branch=master)](https://travis-ci.org/prodio-pm/prodio-orm)
 
 Prodio-ORM
 ==========
