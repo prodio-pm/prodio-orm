@@ -178,6 +178,13 @@ ORM.String(minLength)
 
   * minLength - Minimum length the string must be.
 
+ORM.Value
+---------
+
+Forces a value into a member.
+
+ORM.Value(value)
+
 ORM.validate
 ------------
 
