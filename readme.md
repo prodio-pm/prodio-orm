@@ -35,8 +35,8 @@ ORM
 
 ORM(optionalName, Validators)
 
-    optionalName - An optional name you can pass to the ORM creator, used for savers/loaders.
-    Validators - The root validator or a plain JavaScript Object.
+  * optionalName - An optional name you can pass to the ORM creator, used for savers/loaders.
+  * Validators - The root validator or a plain JavaScript Object.
 
 ```
 var ORM = require('prodio-orm');
@@ -51,7 +51,7 @@ ORM.Array
 
 ORM.Array(next)
 
-    next - Optional child validators to be executed.
+  * next - Optional child validators to be executed.
 
 ```
 var Item = ORM.Object({
@@ -85,8 +85,8 @@ If a value doesn't exist then set the value defaultValue.
 
 ORM.Default(defaultValue, next)
 
-    defaultValue - The value to use if no value is present.
-    next - Optional validator to use if value exists.
+  * defaultValue - The value to use if no value is present.
+  * next - Optional validator to use if value exists.
 
 ORM.ID
 ------
@@ -95,8 +95,8 @@ Validate an Identity value.
 
 ORM.ID(regexp, options)
 
-    regexp - RegExp Object or String representing a Regular Expression
-    options - If regexp is a String, this is the options passed to new RegExp()
+  * regexp - RegExp Object or String representing a Regular Expression
+  * options - If regexp is a String, this is the options passed to new RegExp()
 
 ORM.Nullable
 ------------
@@ -105,7 +105,7 @@ Allow the value to be null, if the value does not exist, then set it to null.
 
 ORM.Nullable(next)
 
-    next - Optional validator to use if value exists.
+  * next - Optional validator to use if value exists.
 
 ORM.Number
 ----------
@@ -149,7 +149,7 @@ Allow the value to be optional, if the value does not exist, then set it to unde
 
 ORM.Optional(next)
 
-    next - Optional validator to use if value exists.
+  * next - Optional validator to use if value exists.
 
 ORM.RegExp
 ----------
@@ -158,8 +158,8 @@ Validate the value with a regular expression.
 
 ORM.RegExp(regexp, options)
 
-    regexp - RegExp Object or String representing a Regular Expression
-    options - If regexp is a String, this is the options passed to new RegExp()
+  * regexp - RegExp Object or String representing a Regular Expression
+  * options - If regexp is a String, this is the options passed to new RegExp()
 
 ORM.Semver
 ----------
@@ -176,7 +176,7 @@ convert it to a String.
 
 ORM.String(minLength)
 
-    minLength - Minimum length the string must be.
+  * minLength - Minimum length the string must be.
 
 ORM.validate
 ------------
