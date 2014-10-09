@@ -16,7 +16,9 @@ The ORM does NOT necessarily match up with the API's.  This is on purpose since
 at times there may be necessity to augment the response object(s).  A good
 example of this is the project/{id}/tree endpoint.
 
-This library implements the complete ORM used by Prodio.
+This library implements the complete ORM used by Prodio.  Yes, any of the other
+off the shelf solutions could have been modified to work, but writing one that
+actually fit Prodio just made more sense.
 
 Installation
 ============

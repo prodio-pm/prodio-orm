@@ -24,6 +24,34 @@ describe('ORM', function(){
         done();
       });
     });
+    it('Should validate with a regular expression', function(done){
+      var o = new ORM(ORM.ID(/[a-z0-9]{5}-[a-z0-9]{2}/i));
+      o.validate('ab123-1a', function(err, date){
+        assert(!err);
+        done();
+      });
+    });
+    it('Should fail with a regular expression', function(done){
+      var o = new ORM(ORM.ID(/[a-z0-9]{5}-[a-z0-9]{2}/i));
+      o.validate('ab123-1', function(err, date){
+        assert(err);
+        done();
+      });
+    });
+    it('Should validate with a string regular expression', function(done){
+      var o = new ORM(ORM.ID('[a-z0-9]{5}-[a-z0-9]{2}', 'i'));
+      o.validate('ab123-1a', function(err, date){
+        assert(!err);
+        done();
+      });
+    });
+    it('Should fail with a string regular expression', function(done){
+      var o = new ORM(ORM.ID('[a-z0-9]{5}-[a-z0-9]{2}', 'i'));
+      o.validate('ab123-1', function(err, date){
+        assert(err);
+        done();
+      });
+    });
     it('Should fail with an Object', function(done){
       var o = new ORM(ORM.ID());
       o.validate({}, function(err, date){
