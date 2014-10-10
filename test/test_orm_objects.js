@@ -18,6 +18,14 @@ describe('ORM', function(){
         done();
       });
     });
+    it('Should not migrate members to the meta if noAutoMigrate is set to true', function(done){
+      var o = new ORM({}, true);
+      o.validate({foo: 'bar'}, function(err, obj){
+        assert(!err);
+        assert(obj.foo);
+        done();
+      });
+    });
     it('Should validate child members', function(done){
       var o = new ORM({i: ORM.Number(), s: ORM.String(), a: ORM.Array()});
       o.validate({i: 1234, s: 'string', a: []}, function(err, obj){

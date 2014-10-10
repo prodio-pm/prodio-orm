@@ -33,10 +33,13 @@ API
 ORM
 ---
 
-ORM(optionalName, Validators)
+ORM(optionalName, proto, noAutoMigrate)
 
   * optionalName - An optional name you can pass to the ORM creator, used for savers/loaders.
-  * Validators - The root validator or a plain JavaScript Object.
+  * proto - The root validator or a plain JavaScript Object.
+  * noAutoMigrate - Defaults false, if true members not registered as part of
+    the prototype will not be migrated to the meta member.  If set to false then
+    anything not defined in the prototype will be migrated to the meta member.
 
 ```
 var ORM = require('prodio-orm');
@@ -121,7 +124,12 @@ ORM.Object
 Validate that the passed in value matches the expected Object ORM.  Anything
 member that doesn't fit into the ORM will be stored in the Objects meta member.
 
-ORM.Object({})
+ORM.Object(proto, noAutoMigrate)
+
+  * proto - The prototype for the expected object
+  * noAutoMigrate - Defaults false, if true members not registered as part of
+    the prototype will not be migrated to the meta member.  If set to false then
+    anything not defined in the prototype will be migrated to the meta member.
 
 ```
 var Obj = ORM.Object({name: ORM.String()});
