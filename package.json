@@ -1,6 +1,6 @@
 {
   "name": "prodio-orm",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Object Relation Model and Validation module",
   "main": "index.js",
   "scripts": {
