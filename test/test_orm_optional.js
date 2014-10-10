@@ -23,12 +23,13 @@ describe('ORM', function(){
         done();
       });
     });
-    it('Should provide an undefined value if none exists', function(done){
+    it('Should not create keys on the object is no value supplied', function(done){
       var o = new ORM('test', {v: ORM.Optional()});
       o.validate({
       }, function(err, value){
         assert(!err);
-        value.v===undefined;
+        var keys = Object.keys(value);
+        assert(keys.length===0);
         done();
       });
     });

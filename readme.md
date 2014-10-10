@@ -145,7 +145,10 @@ Output would be:
 ORM.Optional
 ------------
 
-Allow the value to be optional, if the value does not exist, then set it to undefined.
+Allow the value to be optional.  If the value is passed in and there is a next
+handler then pass the value to next to be validated.  If no value is passed in
+(matches typeof(value) === 'undefined') then call the callback with no value.
+Checking arguments.length is the best way to validate if a value was present.
 
 ORM.Optional(next)
 
