@@ -52,7 +52,7 @@ describe('ORM', function(){
         assert(err);
         assert(err.errors.length===1);
         assert(err.errors[0].key==='a');
-        assert(err.errors[0].error.errors.length===1);
+        assert(err.errors[0].errors.length===1);
         done();
       });
     });
